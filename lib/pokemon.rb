@@ -1,16 +1,15 @@
 require 'pry' 
 
 class Pokemon
-  
+
   attr_accessor :name, :type, :db #:hp
   attr_reader :id
   
-  def initialize(name:, type:, id: nil, db:)#, hp: nil)
+  def initialize(name:, type:, id: nil, db:)
     @name = name
     @type = type
     @id = id
     @db = db
-    #@hp = hp
   end
   
   def self.save(name, type, db)
@@ -32,3 +31,4 @@ class Pokemon
 #     db.execute("UPDATE pokemon SET hp = ? WHERE id = ?", hp, id)
 #   end
   end
+
